@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-primary: #6535e5;
+  --color-secondary: #e0c9ff;
+
+  /* Font */
+  --font-cinzel: "Cinzel Decorative", serif;
+  --font-lora: "Lora", serif;
+}
+
+:root {
+  /* Colors */
+  --color-primary: #6535e5;
+  --color-secondary: #e0c9ff;
+
+  /* Font */
+  --font-Montserrat: "Montserrat Underline", sans-serif;
+  --font-lora: "Lora", serif;
+}
+
+body {
+  font-family: var(--font-base);
+  background: linear-gradient(to bottom right, #f8f0ff, #f5ebff);
+}
+
+/* Animatiun */
+/* Fade Slide */
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-slide {
+  animation: fadeSlide 0.5s ease-out forwards;
+}
+
+/* Loader */
+@keyframes loader {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.loader {
+  background-color: rgb(163, 161, 161);
+  border-radius: 10px;
+  animation: loader 2s ease-in-out infinite;
+}

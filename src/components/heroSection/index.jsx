@@ -34,11 +34,11 @@ export default function HeroSection() {
 
     if (inputText) {
       endpoint =
-        "summary-tool-server-production-6825.up.railway.app/api/text/summaries";
+        "https://summary-tool-server-production-6825.up.railway.app/api/text/summaries";
       isUrl = false;
     } else if (inputUrl) {
       endpoint =
-        "summary-tool-server-production-6825.up.railway.app/api/text/summaries/url";
+        "https://summary-tool-server-production-6825.up.railway.app/api/text/summaries/url";
     }
 
     // Simulasi fetch ke API, kamu bisa ganti ini nanti

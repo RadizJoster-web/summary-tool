@@ -12,7 +12,7 @@ export default function UrlForm({ setUrlForm, setInputUrl }) {
         />
         <button
           onClick={() => setUrlForm(false)}
-          className="bg-secondary p-3 text-xl rounded-md text-black hover:opacity-90"
+          className="bg-secondary p-3 text-xl rounded-md text-black hover:opacity-90 cursor-pointer"
         >
           <IoMdClose />
         </button>

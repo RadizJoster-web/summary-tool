@@ -19,9 +19,7 @@ export default function InputForm({
         <div>
           {showHeader && (
             <div className="mb-4 flex items-center gap-4">
-              <span className="text-gray-500 font-semibold">
-                Mulai Mengetik atau
-              </span>
+              <span className="text-gray-500 font-semibold">Masukan URL</span>
               <button
                 onClick={() => setUrlForm(true)}
                 className="flex items-center gap-2 bg-secondary text-black  px-4 py-2 rounded-full text-sm hover:opacity-90 cursor-pointer"

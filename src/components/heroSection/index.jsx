@@ -70,9 +70,9 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="text-center py-10 px-4">
+    <section className="min-h-screen flex items-center justify-center flex-col text-center pb-10 pt-20 md:px-40 bg-gradient-to-br from-[#f8f0ff] to-[#f5ebff]">
       <Tegline />
-      <div className="min-h-screen px-4 md:px-20 flex flex-col md:flex-row">
+      <div className="w-full flex flex-col md:flex-row">
         <InputSection
           onSubmit={handleSummarize}
           setInputText={setInputText}

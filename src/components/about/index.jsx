@@ -10,9 +10,9 @@ export default function About() {
           <span className="font-cinzel text-primary hover:scale-105 duration-500">
             Summary Tool
           </span>
-          ,<br />
+          <br />
           Membuat Pengalaman Membaca Anda Lebih{" "}
-          <span className="font-bold text-secondary">Cepat & Efektif</span>
+          <span className="font-bold text-primary">Cepat & Efektif</span>
         </h1>
 
         <p className="text-gray-600 text-lg">

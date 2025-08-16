@@ -52,7 +52,10 @@ export default function HeroSection() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ data: isUrl ? inputUrl : inputText }),
+        body: JSON.stringify({
+          data: isUrl ? inputUrl : inputText,
+          lang: selectedLang.language,
+        }),
       });
 
       const data = await res.json();

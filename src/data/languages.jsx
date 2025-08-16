@@ -4,6 +4,8 @@ const languages = [
   { language: "French", code: "FR" },
   { language: "German", code: "DE" },
   { language: "Japanese", code: "JP" },
+  { language: "Korean", code: "KR" },
+  { language: "Indonesian", code: "ID" },
   { language: "Italian", code: "IT" },
   { language: "Chinese", code: "CN" },
   { language: "Arabic", code: "SA" },

@@ -18,7 +18,7 @@ export default function OutputForm({ summary, summryErr, loading }) {
 
   return (
     <div className="w-full lg:w-1/2 p-4">
-      <div className="bg-white rounded-2xl p-6 shadow-md h-[450px]">
+      <div className="relative bg-white rounded-2xl p-6 shadow-md h-[450px]">
         <div className="flex justify-between mb-2">
           <button
             onClick={handleCopy}

@@ -2,10 +2,10 @@ import StickUseComputer from "../../assets/stick use computer.png";
 
 export default function About() {
   return (
-    <section className="w-full min-h-screen flex flex-col lg:flex-row items-center justify-between px-6 md:px-40 py-10 ">
+    <section className="w-full flex flex-col md:flex-row items-center justify-between px-6 lg:px-40 py-10 ">
       {/* Left Section */}
-      <div className="flex flex-col gap-6 max-w-xl">
-        <h1 className="text-4xl lg:text-4xl font-semibold leading-tight text-gray-900">
+      <div className="flex flex-col gap-6 max-w-xl md:w-1/2 ">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight text-gray-900">
           Dengan{" "}
           <span className="font-cinzel text-primary hover:scale-105 duration-500">
             Summary Tool
@@ -15,7 +15,7 @@ export default function About() {
           <span className="font-bold text-primary">Cepat & Efektif</span>
         </h1>
 
-        <p className="text-gray-600 text-lg">
+        <p className="text-gray-600 text-sm">
           Alat kami memanfaatkan teknologi{" "}
           <span className="font-semibold">Gemini-AI</span> untuk merangkum teks
           & web. Prompt kami sudah di desain untuk memberikan ringkasan yang
@@ -29,8 +29,8 @@ export default function About() {
       </div>
 
       {/* Right Section */}
-      <div className="relative mt-10 lg:mt-0 flex justify-center">
-        <div className="bg-white p-6 rounded-2xl shadow-lg">
+      <div className="relative h-full mt-10 lg:mt-0 flex justify-center">
+        <div className="h-full bg-white p-6 rounded-2xl shadow-lg">
           <img
             src={StickUseComputer}
             alt="Stick Use Computer"

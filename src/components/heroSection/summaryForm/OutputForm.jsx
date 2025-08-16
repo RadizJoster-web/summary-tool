@@ -17,9 +17,9 @@ export default function OutputForm({ summary, summryErr, loading }) {
   };
 
   return (
-    <div className="w-full md:w-1/2 p-4">
-      <div className="bg-white rounded-2xl p-6 shadow-md h-[450px] relative">
-        <div className="flex justify-end mb-2">
+    <div className="w-full lg:w-1/2 p-4">
+      <div className="bg-white rounded-2xl p-6 shadow-md h-[450px]">
+        <div className="flex justify-between mb-2">
           <button
             onClick={handleCopy}
             className="flex items-center gap-2 bg-secondary text-black  px-4 py-2 rounded-full text-sm hover:opacity-90 cursor-pointer"
@@ -27,6 +27,7 @@ export default function OutputForm({ summary, summryErr, loading }) {
             {copied ? <FaCheck /> : <IoCopyOutline />}
             {copied ? "Copied!" : "Copy"}
           </button>
+          <span className=" text-sm text-gray-400">{countWords()} kata</span>
         </div>
 
         <div className="overflow-y-auto h-[310px] text-gray-700 text-lg text-start">
@@ -44,10 +45,6 @@ export default function OutputForm({ summary, summryErr, loading }) {
             <p className="text-gray-400">{summryErr}</p>
           )}
         </div>
-
-        <span className="absolute bottom-6 left-6 text-sm text-gray-400">
-          {countWords()} kata
-        </span>
 
         {loading && (
           <div className=" absolute top-19 inset-0 flex flex-col items-start justify-start gap-5 bg-white rounded-2xl pl-5">

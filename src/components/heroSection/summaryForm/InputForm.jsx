@@ -1,5 +1,6 @@
 import { useState } from "react";
 import UrlForm from "./UrlForm";
+import LanguageSelect from "./LanguageSelect";
 
 import { IoMdLink } from "react-icons/io";
 
@@ -9,24 +10,31 @@ export default function InputForm({
   setInputUrl,
   showHeader,
   countWords,
+  selectedLang,
+  setSelectedLang,
+  languages,
 }) {
   // State untuk mengontrol tampilan form URL
   const [urlForm, setUrlForm] = useState(false);
 
   return (
-    <div className="w-full md:w-1/2 p-4 ">
+    <div className="w-full lg:w-1/2 p-4">
       <div className="relative h-[450px] bg-white rounded-2xl p-6 shadow-md flex flex-col justify-between">
         <div>
           {showHeader && (
-            <div className="mb-4 flex items-center gap-4">
-              <span className="text-gray-500 font-semibold">Masukan URL</span>
-              <button
-                onClick={() => setUrlForm(true)}
-                className="flex items-center gap-2 bg-secondary text-black  px-4 py-2 rounded-full text-sm hover:opacity-90 cursor-pointer"
-              >
-                <IoMdLink className="text-lg" />
-                Web URL
-              </button>
+            <div className="mb-4 flex items-center justify-between">
+              <div className="flex items-center gap-4">
+                <span className="text-gray-500 font-semibold">Masukan URL</span>
+                <button
+                  onClick={() => setUrlForm(true)}
+                  className="flex items-center gap-2 bg-secondary text-black  px-4 py-2 rounded-full text-sm hover:opacity-90 cursor-pointer"
+                >
+                  <IoMdLink className="text-lg" />
+                  <span className="hidden md:inline">Web URL</span>
+                </button>
+              </div>
+
+              <span className="text-sm text-gray-400">{countWords()} kata</span>
             </div>
           )}
 
@@ -42,7 +50,12 @@ export default function InputForm({
         )}
 
         <div className="flex items-center justify-between mt-4">
-          <span className="text-sm text-gray-400">{countWords()} kata</span>
+          <LanguageSelect
+            selectedLang={selectedLang}
+            setSelectedLang={setSelectedLang}
+            languages={languages}
+          />
+
           <button
             onClick={(e) => onSubmit(e)}
             className="bg-black text-white hover:bg-gray-900 px-6 py-2 rounded-full hover:opacity-90 cursor-pointer active:scale-90 transition-all duration-200"

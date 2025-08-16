@@ -4,11 +4,14 @@ import Tegline from "./HeroTagline";
 import InputSection from "./summaryForm/InputForm";
 import OutputSection from "./summaryForm/OutputForm";
 
+import languages from "../../data/languages";
+
 export default function HeroSection() {
   const [summary, setSummary] = useState("");
   const [inputText, setInputText] = useState("");
   const [inputUrl, setInputUrl] = useState("");
   const [summryErr, setSummryErr] = useState("Masukan text untuk dirangkum");
+  const [selectedLang, setSelectedLang] = useState(languages[0]);
   const [loading, setLoading] = useState(false);
 
   // Menghitung jumlah kata dalam state summary
@@ -70,15 +73,18 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center flex-col text-center pb-10 pt-20 md:px-40 bg-gradient-to-br from-[#f8f0ff] to-[#f5ebff]">
+    <section className="min-h-screen flex items-center justify-center flex-col text-center pb-10 pt-20 xl:px-40 bg-gradient-to-br from-[#f8f0ff] to-[#f5ebff]">
       <Tegline />
-      <div className="w-full flex flex-col md:flex-row">
+      <div className="w-full flex flex-col lg:flex-row items-center justify-center">
         <InputSection
           onSubmit={handleSummarize}
           setInputText={setInputText}
           setInputUrl={setInputUrl}
           showHeader={showHeader}
           countWords={countWords}
+          selectedLang={selectedLang}
+          setSelectedLang={setSelectedLang}
+          languages={languages}
         />
         <OutputSection
           summary={summary}

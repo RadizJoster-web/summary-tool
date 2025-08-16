@@ -24,6 +24,12 @@ body {
   font-family: var(--font-Montserrat);
 }
 
+select,
+option {
+  font-family: system-ui, "Segoe UI Emoji", "Apple Color Emoji",
+    "Noto Color Emoji", sans-serif;
+}
+
 /* Animatiun */
 /* Fade Slide */
 @keyframes fadeSlide {
@@ -36,7 +42,8 @@ body {
     transform: translateY(0);
   }
 }
-a .fade-slide {
+
+.fade-slide {
   animation: fadeSlide 0.5s ease-out forwards;
 }
 
